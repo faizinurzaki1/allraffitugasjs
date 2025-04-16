@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Gambar Keren</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px #00000066;
+    }
+    /* Styling input search */
+    .search-container {
+      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 400px;
+    }
+    .search-container input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      outline: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .card {
+      background-color: #ffffffcc;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .card a, p {
+      padding: 0.8rem;
+      text-align: center;
+      color: #333;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 2rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tugas Tugas - PPLG</h1>
+  <!-- Bagian Search -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Cari tugas...">
+  </div>
+  <div class="container" id="cardContainer">
+    <div class="card">
+      <p><a href="pengulangan1.html">Pengulangan 1</a></p>
+    </div>
+    <div class="card">
+      <p><a href="lat2.html">Pengulangan 2</a></p>
+    </div>
+    <div class="card">
+      <p><a href="lat3.html">pengulangan</a></p>
+    </div>
+    <div class="card">
+      <p><a href="lat4.html">pengulangan 4</a></p>
+    </div>
+    <div class="card">
+      <p><a href="lat5.html">pengulangan 5</a></p>
+    </div>
+    <div class="card">
+      <p><a href="lat6.html">pengulangan 6</a></p>
+    </div>
+    <div class="card">
+      <p><a href="lat7.html">pengulangan 7</a></p>
+    </div>
+    <div class="card">
+      <p><a href="fotocopy.html">Fotocopy</a></p>
+    </div>
+    <div class="card">
+      <p><a href="seblak.html">Seblak</a></p>
+    </div>
+    <div class="card">
+      <p><a href="latflowchart1.html">Lat flowchart 1</a></p>
+    </div>
+    <div class="card">
+      <p><a href="latflowchart2.html">Lat flowchart 2</a></p>
+    </div>
+    <div class="card">
+      <p><a href="latflowchart3.html">Lat flowchart 3</a></p>
+    </div>
+    <div class="card">
+      <p><a href="latjs1.js">Lat JS 1</a></p>
+    </div>
+    <div class="card">
+      <p><a href="latjs2.js">Lat JS 2</a></p>
+    </div>
+    <div class="card">
+      <p><a href="">Cek Prestasi</a></p>
+    </div>
+    <div class="card">
+      <p><a href="">Luas Persegi</a></p>
+    </div>
+    <div class="card">
+      <p><a href="">Luas Segitiga</a></p>
+    </div>
+    <div class="card">
+      <p><a href="">Cek Usia Penonton</a></p>
+    </div>
+    <div class="card">
+      <p><a href="">Mencari Nilai</a></p>
+    </div>
+    <div class="card">
+      <p><a href="">Menghitung Belanjaan Buah</a></p>
+    </div>
+    <div class="card">
+      <p><a href="">Lat Parameter</a></p>
+    </div>
+  </div>
+  <footer>
+    Dibuat oleh Alrafi - 2025
+  </footer>
+  
+  <!-- Script untuk fungsi pencarian -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
+
+    searchInput.addEventListener("input", () => {
+      const searchTerm = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const cardText = card.innerText.toLowerCase();
+        if (cardText.includes(searchTerm)) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
